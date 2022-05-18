@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Random Users Generator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/templatemo-style.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+    </head>
+    <body>
+        <!-- Over all div tag -->
+
+        <div id="app">
+            <div id="loader-wrapper">
+                <div id="loader"></div>
+            </div>
+
+            <div class="content-bg"></div>
+            <div class="bg-overlay"></div>
+
+            <!-- SITE TOP -->
+            <div class="site-top">
+                <div class="site-header clearfix">
+                </div> <!-- .site-header -->
+                <div class="site-banner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-offset-2 col-md-8 text-center">
+                                <h1><span style="color: green;">RA</span><span class="blue">ND</span><span style="color: red;">OM</span> USER GENERATOR</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- .site-banner -->
+            </div> <!-- .site-top -->
+
+            <!-- MAIN POSTS -->
+            <div class="main-posts">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="blog-masonry masonry-true">
+                            <div class="post-masonry col-md-6" style="margin-left: 100px;">
+                                <div class="post-thumb">
+                                    <img :src="picture" :alt="`${firstName} ${lastName}`">
+                                     </div>
+                                    </div>
+                            <div class="post-masonry col-md-6" style="margin-left: 20px;">
+                                <h3 style="font-family: 'poppins';">Name: {{ firstName }} {{ lastName }}</h3>
+                                <h3 style="font-family: 'poppins';">Email: {{ email }}</h3>
+                                <h3 style="font-family: 'poppins';">Gender: {{ gender }}</h3>
+                            </div>
+
+                    </div>
+                </div>
+
+                <div class="post-masonry col-md-6" style="margin-left: 90px;">
+                    <button @click="getUser()" class="col-md-offset-3 col-sm-6 btn btn-primary">Get Random User</button>
+                </div>
+            </div>
+
+
+            <!-- FOOTER -->
+            <footer class="site-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div class="social-icons">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <p class="copyright-text">Copyright &copy; Igudy 2022
+                            | Photos by <a rel="nofollow" href="http://unsplash.com">Random User Generator</a></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- This div below is for vue -->
+        </div>
+
+        <script src="https://unpkg.com/vue@3.0.5"></script>
+        <script src="js/main.js"></script>
+
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="js/min/plugins.min.js"></script>
+        <script src="js/min/main.min.js"></script>
+
+        <!-- Preloader -->
+        <script type="text/javascript">
+            //<![CDATA[
+            $(window).load(function() { // makes sure the whole site is loaded
+                $('#loader').fadeOut(); // will first fade out the loading animation
+                    $('#loader-wrapper').delay(100).fadeOut('slow'); // will fade out the white DIV that covers the website.
+                $('body').delay(350).css({'overflow-y':'visible'});
+            })
+            //]]>
+        </script>
+	<!-- templatemo 434 masonry -->
+    </body>
+</html>
